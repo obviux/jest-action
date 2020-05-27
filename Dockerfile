@@ -1,5 +1,4 @@
-FROM node:12.17.0-alpine
-
+FROM node:12-buster
 RUN apk update && \
     apk upgrade && \
     apk add git openssh
