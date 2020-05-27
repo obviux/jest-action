@@ -1,7 +1,7 @@
 FROM node:12-buster
-RUN apk update && \
-    apk upgrade && \
-    apk add git openssh
+RUN apt-get update && \
+    apt-get upgrade && \
+    apt-get install git openssh
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
